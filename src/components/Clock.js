@@ -33,8 +33,8 @@ const Clock = () => {
       <p className="time">{formattedTime}</p>
       <p className="day">{formattedDate}</p>
       <p className="mdy">
-        {formattedMonth},
-        { formattedDay},
+        {formattedMonth}/
+        { formattedDay}/
         { formattedYear}
 
       </p>

@@ -1,6 +1,7 @@
 * {
   /* /* background-color: #48dbfb; */
   overflow-y: hidden;
+  
 
    
 }
@@ -19,6 +20,7 @@ body {
   background-position: fixed;
   background-size: cover;
   background-attachment: fixed;
+  
 
 }
 input {
@@ -42,7 +44,9 @@ input {
   background-size: cover;
   background-attachment:fixed;
   background-repeat: no-repeat;
-  border-radius: 10px;
+  border-radius: 0px;
+
+ 
 }
 #image {
   position: relative;
@@ -107,12 +111,31 @@ img {
     width: 350px;
   }
   #image img{
-    width: 150px;
-    left: 20px;
+    width: 200px;
+    left: -0px;
+    
   }
 .flex2 img{
   width: 30px;
   height: 30px;
   margin-top: 10px;
+}
+body{
+  background: none;
+}
+.flex1{
+  margin-top: 0;
+
+}
+.container{
+  margin-top: 30px;
+}
+body{
+  background-image: url("./images/white-clouds-blue-background.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+.flex1 input{
+  width: 100px;
 }
 }
