@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import "./clock.css"
 
 const Clock = () => {
   const [currentTime, setCurrentTime] = useState(new Date());
@@ -23,15 +24,19 @@ const Clock = () => {
   const formattedMonth = currentTime.toLocaleDateString("en-US", {
     month: "long",
   });
-
+  
+  const formattedDay=currentTime.getDate();
   const formattedYear = currentTime.getFullYear();
 
   return (
-    <div>
-      <p>{formattedTime}</p>
-      <p>{formattedDate}</p>
-      <p>
-        {formattedMonth} {formattedYear}
+    <div id="Time">
+      <p className="time">{formattedTime}</p>
+      <p className="day">{formattedDate}</p>
+      <p className="mdy">
+        {formattedMonth},
+        { formattedDay},
+        { formattedYear}
+
       </p>
     </div>
   );

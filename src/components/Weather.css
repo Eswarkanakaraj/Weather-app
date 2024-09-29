@@ -1,0 +1,118 @@
+* {
+  /* /* background-color: #48dbfb; */
+  overflow-y: hidden;
+
+   
+}
+.container {
+  margin-top: 80px;
+  overflow-y: hidden;
+}
+body {
+  margin-top: 0px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  place-items: center;
+ background-image: url("./images/white-clouds-blue-background.jpg");
+  background-position: fixed;
+  background-size: cover;
+  background-attachment: fixed;
+
+}
+input {
+  border-radius: 20px;
+  text-align: center;
+  padding: 10px;
+  margin-top: 15px;
+  margin-left: 20px;
+}
+.main {
+  box-shadow: 0px 0px 5px ;
+  border: 2px none rgb(0, 0, 0);
+  width: 450px;
+  /* overflow: hidden; */
+  height: 500px;
+  /* padding: 30px; */
+  /* box-shadow: 0 0 5px 0px; */
+  margin-top: 0px;
+  margin-bottom: 10px;
+  background-image: url("./images/sl_031821_41530_03.jpg");
+  background-size: cover;
+  background-attachment:fixed;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+}
+#image {
+  position: relative;
+ padding: 20px;
+
+}
+#image img {
+  width: 200px;
+  display: flex;
+  position: absolute;
+ right: 270px;
+  bottom: 130px;
+  z-index: 1000;
+}
+img {
+  width: 50px;
+  justify-content: space-around;
+}
+.flex1 {
+  display: flex;
+  justify-content: center;
+}
+.flex2 {
+  display: flex;
+  justify-content: space-around;
+  /* margin-top: 10px; */
+  padding: 5px;
+}
+.hws {
+  text-align: end;
+ 
+  padding: 20px;
+}
+.city,
+.temp {
+  text-align: end;
+ 
+
+  margin-top: 0;
+  margin-right: 30px;
+
+  top: 0;
+}
+.temp {
+ 
+  font-weight: 400;
+  font-size: x-large;
+}
+.city {
+  font-size: medium;
+}
+
+.discrip{
+  text-align: start;
+  
+}
+@media  only screen and (max-width:426px) {
+  *{
+    overflow-y: hidden;
+  }
+  .main{
+    width: 350px;
+  }
+  #image img{
+    width: 150px;
+    left: 20px;
+  }
+.flex2 img{
+  width: 30px;
+  height: 30px;
+  margin-top: 10px;
+}
+}
