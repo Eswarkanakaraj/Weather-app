@@ -1,7 +1,17 @@
 // Weather.js
+// import react from 'react';
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Clock from "./Clock"; // Import the Clock component
+import one from "./images/one.png";
+import two from "./images/two.png";
+import three from "./images/three.png";
+import four from "./images/four.png";
+import nine from "./images/nine.png";
+import ten from "./images/ten.png";
+import leven from "./images/leven.png";
+import thirteen from "./images/thirteen.png";
+import fifty from "./images/fifty.png";
 
 import "./Weather.css";
 
@@ -28,7 +38,32 @@ const Weather = () => {
     };
     fetchWeather();
   }, [city]);
+  const icon = weather && weather.weather ? weather.weather[0].icon : null;
+  const getImage = () => {
+    switch (icon) {
+      case "01d":
+        return one;
+      case "02d":
+        return two;
+      case "03d":
+        return three;
+      case "04d":
+        return four;
+      case "09d":
+        return nine;
+      case "10d":
+        return ten;
+      case "11d":
+        return leven;
+      case "13d":
+        return thirteen;
+      case "50d":
+        return fifty;
 
+      default:
+        return one;
+    }
+  };
   console.log(weather);
   return (
     <div className="container">
@@ -47,33 +82,32 @@ const Weather = () => {
       {/* this is clear  */}
 
       <div className="main">
-        {error && <p style={{ color: "red" }}>{error}</p>}
+        {error && <p className="error">{error}<img src="sorry.png" alt="sorry"/></p>}
         {weather && (
           <div>
             <div id="image">
-            
-                
-                <p className="discrip"><img src="untitled-2.png" alt="sun" />
-                  {/* Weather: {weather.weather[0].description} */}
-                </p>
+              <p className="discrip">
+                <img src={getImage()} alt="discription" />
+                {/* Weather: {weather.weather[0].description}
+                {icon} */}
+              </p>
 
-                <p className="temp">{weather.main.temp}°c</p>
+              <p className="temp">{weather.main.temp}°c</p>
 
-                <h3 className="city"> {weather.name}</h3>
-                <Clock />
-             
+              <h3 className="city"> {weather.name}</h3>
+              <Clock />
             </div>
 
             {/* this is clear */}
             <div id="bottom">
-            <h3 className="hws">Today's weather</h3>
-            <div className="flex2">
-              <img src="humidity.png" alt="humidity" />
-              <p> {weather.main.humidity}%</p>
-              <img src="wind.png" alt="wind" />
-              <p>{weather.wind.speed} m/s</p>
-              <img src="sea-level.png" alt="sealvl" />
-              <p> {weather.main.sea_level} m a.s. l</p>
+              <h3 className="hws">Today's weather</h3>
+              <div className="flex2">
+                <img src="humidity.png" alt="humidity" />
+                <p> {weather.main.humidity}%</p>
+                <img src="wind.png" alt="wind" />
+                <p>{weather.wind.speed} m/s</p>
+                <img src="sea-level.png" alt="sealvl" />
+                <p> {weather.main.sea_level} m a.s. l</p>
               </div>
             </div>
           </div>

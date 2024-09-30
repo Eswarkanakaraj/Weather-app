@@ -21,6 +21,7 @@ body {
   background-size: cover;
   background-attachment: fixed;
   
+  
 
 }
 input {
@@ -31,7 +32,7 @@ input {
   margin-left: 20px;
 }
 .main {
-  box-shadow: 0px 0px 5px ;
+  box-shadow: 0px 0px 3px ;
   border: 2px none rgb(0, 0, 0);
   width: 450px;
   /* overflow: hidden; */
@@ -44,7 +45,10 @@ input {
   background-size: cover;
   background-attachment:fixed;
   background-repeat: no-repeat;
+ background-blend-mode: overlay;
+background-clip: padding-box;
   border-radius: 0px;
+
 
  
 }
@@ -52,12 +56,15 @@ input {
   position: relative;
  padding: 20px;
 
+
 }
 #image img {
-  width: 200px;
+ min-width: 130px;
+  max-width: 300px;
+ 
   display: flex;
   position: absolute;
- right: 270px;
+  right: 300px;
   bottom: 130px;
   z-index: 1000;
 }
@@ -98,14 +105,34 @@ img {
 .city {
   font-size: medium;
 }
-
+#bottom{
+  border: none;
+  background: none;
+}
 .discrip{
   text-align: start;
   
 }
+.error{
+  
+  color:#ec1616;
+  font-size: xx-large;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  filter: drop-shadow(2px 4px 2px black);
+  flex-direction: column-reverse;
+  gap: 50px;
+}
+.error img{
+  width: 200px;
+  height: auto;
+}
 @media  only screen and (max-width:426px) {
   *{
-    overflow-y: hidden;
+    overflow: hidden;
   }
   .main{
     width: 350px;
