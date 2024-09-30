@@ -12,6 +12,9 @@ import ten from "./images/ten.png";
 import leven from "./images/leven.png";
 import thirteen from "./images/thirteen.png";
 import fifty from "./images/fifty.png";
+import oneN from "./images/oneN.png";
+import twoN from "./images/twoN.png";
+import fourN from "./images/fourN.png";
 
 import "./Weather.css";
 
@@ -39,26 +42,38 @@ const Weather = () => {
     fetchWeather();
   }, [city]);
   const icon = weather && weather.weather ? weather.weather[0].icon : null;
-  const temp = weather && weather.main ? Math.floor(weather.main.temp)  : null;
+  const temp = weather && weather.main ? Math.floor(weather.main.temp) : null;
   const getImage = () => {
     switch (icon) {
       case "01d":
         return one;
+      case "01n":
+        return oneN;
       case "02d":
         return two;
+      case "02n":
+        return twoN;
       case "03d":
+      case "03n":
         return three;
       case "04d":
         return four;
+      case "04n":
+        return fourN;
       case "09d":
+      case "09n":
         return nine;
       case "10d":
+      case "10n":
         return ten;
       case "11d":
+      case "11n":
         return leven;
       case "13d":
+      case "13n":
         return thirteen;
       case "50d":
+      case "50n":
         return fifty;
 
       default:
@@ -83,7 +98,12 @@ const Weather = () => {
       {/* this is clear  */}
 
       <div className="main">
-        {error && <p className="error">{error}<img src="sorry.png" alt="sorry"/></p>}
+        {error && (
+          <p className="error">
+            {error}
+            <img src="sorry.png" alt="sorry" />
+          </p>
+        )}
         {weather && (
           <div>
             <div id="image">
@@ -112,7 +132,6 @@ const Weather = () => {
               </div>
             </div>
           </div>
-          
         )}
         <div id="founder" align="end">
           Designed by <span>Eswar</span>

@@ -187,7 +187,7 @@ img {
   }
 
   .main {
-    width: 380px;
+    width: 330px;
   }
 
   #image img {
@@ -230,5 +230,12 @@ img {
     text-align: end;
     letter-spacing: 1px;
 
+  }
+  .error{
+    font-size: large;
+    gap: 80px;
+  }
+  .error img{
+    width: 150px;
   }
 }
