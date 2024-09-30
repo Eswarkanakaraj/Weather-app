@@ -39,6 +39,7 @@ const Weather = () => {
     fetchWeather();
   }, [city]);
   const icon = weather && weather.weather ? weather.weather[0].icon : null;
+  const temp = weather && weather.main ? Math.floor(weather.main.temp)  : null;
   const getImage = () => {
     switch (icon) {
       case "01d":
@@ -92,7 +93,7 @@ const Weather = () => {
                 {icon} */}
               </p>
 
-              <p className="temp">{weather.main.temp}°c</p>
+              <p className="temp">{temp}°c</p>
 
               <h3 className="city"> {weather.name}</h3>
               <Clock />
@@ -111,7 +112,11 @@ const Weather = () => {
               </div>
             </div>
           </div>
+          
         )}
+        <div id="founder" align="end">
+          Designed by <span>Eswar</span>
+        </div>
       </div>
     </div>
   );

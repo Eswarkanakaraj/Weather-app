@@ -1,8 +1,24 @@
-#Time{
-    text-align: start;
-   margin-left: 30px;
-   background: none;
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap");
+#Time {
+  text-align: start;
+  margin-left: 30px;
+  background: none;
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 800;
+  font-style: italic;
+  font-size: small;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 2px rgb(17, 16, 16);
+  color: rgb(255, 255, 255);
 }
-body{
-    background: none;
+body {
+  background: none;
+}
+@media only screen and (max-width:426px){
+    #Time{
+        color:#000000;
+        text-shadow: none;
+        margin-top: 25px;
+        
+    }
 }
